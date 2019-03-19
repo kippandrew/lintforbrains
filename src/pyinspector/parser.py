@@ -2,6 +2,7 @@ import enum
 import typing
 import weakref
 
+# noinspection PyPep8Naming
 from xml.etree import ElementTree as et
 
 import pyinspector.logging
@@ -76,11 +77,11 @@ class ProblemSeverity(enum.Enum):
     WEAK_WARNING = 'WEAK WARNING'
 
 
-class ProblemClass:
+class ProblemCategory:
 
-    def __init__(self, severity: ProblemSeverity, description: str):
+    def __init__(self, description: str, severity: ProblemSeverity):
         """
-        Initialize new instance of the ProblemClass class.
+        Initialize new instance of the ProblemCategory class.
 
         :param severity:
         :param description:
@@ -88,22 +89,46 @@ class ProblemClass:
         self.severity = severity
         self.description = description
 
+    def __eq__(self, other):
+        if isinstance(other, ProblemCategory):
+            return self.severity == other.severity and self.description == other.description
+        else:
+            return NotImplemented
+
+    def __repr__(self):
+        return "[{sev}] {desc}".format(sev=self.severity.value, desc=self.description)
+
 
 class Problem:
 
-    def __init__(self, file: str, line: int, classification: ProblemClass, description: str):
+    def __init__(self, file: str, line: int, category: ProblemCategory, description: str):
         """
         Initialize instance of the Problem class.
 
         :param file: problem file
         :param line:  problem line
-        :param classification: problem classification
+        :param category: problem category
         :param description: problem description
         """
         self.file = file
         self.line = line
-        self.classification = classification
+        self.category = category
         self.description = description
+
+    def __eq__(self, other):
+        if isinstance(other, Problem):
+            return (self.file == other.file and
+                    self.line == other.line and
+                    self.category == other.category and
+                    self.description == other.description)
+        else:
+            return NotImplemented
+
+    def __repr__(self):
+        return "{category} ({desc}) at {file}:{line}".format(desc=self.description,
+                                                             category=self.category,
+                                                             file=self.file,
+                                                             line=self.line)
 
 
 class ParseError(Exception):
@@ -158,21 +183,31 @@ def _parse_inspection_rule_xml(profile: InspectionProfile, group: InspectionGrou
     return rule
 
 
-def parse_profile(filename: str) -> InspectionProfile:
+def parse_profile(file: str) -> InspectionProfile:
     """
-    Parse profile XML
+    Parse profile XML from a file
 
-    :param filename:
+    :param file: file name or file object
     :return: inspection profile
     """
-    return _parse_inspection_profile_xml(et.parse(filename).getroot())
+    return _parse_inspection_profile_xml(et.parse(file).getroot())
 
 
-def _parse_problem_class(e: et.Element):
+def parse_profile_fromstring(source: str) -> InspectionProfile:
+    """
+    Parse profile XML from a string
+
+    :param source: XML string
+    :return: inspection profile
+    """
+    return _parse_inspection_profile_xml(et.fromstring(source))
+
+
+def _parse_problem_category(e: et.Element):
     problem_class_severity = e.get('severity')
     problem_class_description = e.text
 
-    return ProblemClass(ProblemSeverity(problem_class_severity), problem_class_description)
+    return ProblemCategory(problem_class_description, ProblemSeverity(problem_class_severity))
 
 
 def _parse_problems_xml(e: et.Element):
@@ -184,9 +219,9 @@ def _parse_problems_xml(e: et.Element):
 
     for c in e.iter('problem'):
         problem_file = c.findtext('file')
-        problem_line = c.findtext('line')
+        problem_line = int(c.findtext('line'))
         problem_desc = c.findtext('description')
-        problem_class = _parse_problem_class(c.find('problem_class'))
+        problem_class = _parse_problem_category(c.find('problem_class'))
 
         problem = Problem(problem_file,
                           problem_line,
@@ -198,12 +233,23 @@ def _parse_problems_xml(e: et.Element):
     return problems
 
 
-def parse_problems(filename: str) -> typing.List[Problem]:
+def parse_problems(file: str) -> typing.List[Problem]:
     """
-    Parse problems XML
+    Parse problems XML from a file
 
-    :param filename:
-    :return: inspection problems
+    :param file: file name or file handle
+    :return: list of inspection problems
     """
 
-    return _parse_problems_xml(et.parse(filename).getroot())
+    return _parse_problems_xml(et.parse(file).getroot())
+
+
+def parse_problems_fromstring(source: str) -> typing.List[Problem]:
+    """
+    Parse problems XML from a string
+
+    :param source: XML string
+    :return: list of inspection problems
+    """
+
+    return _parse_problems_xml(et.fromstring(source))
