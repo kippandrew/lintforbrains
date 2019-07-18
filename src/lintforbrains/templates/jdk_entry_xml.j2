@@ -1,0 +1,26 @@
+<!--suppress ALL -->
+{% for r in runtimes %}
+    <jdk version="2">
+        <name value="{{ r.sdk_name }}"/>
+        <type value="{{ r.sdk_type }}"/>
+        <version value="{{ r.sdk_version }}"/>
+        <homePath value="{{ r.sdk_home }}"/>
+        <roots>
+            <classPath>
+                <root type="composite">
+                    {% for l in r.sdk_libs %}
+                        <root url="file://{{ l }}" type="simple"/>
+                    {% endfor %}
+                    <root url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" type="simple"/>
+                    <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3" type="simple"/>
+                    <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3" type="simple"/>
+                    <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3" type="simple"/>
+                    <root url="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/2and3" type="simple"/>
+                </root>
+            </classPath>
+            <sourcePath>
+                <root type="composite"/>
+            </sourcePath>
+        </roots>
+    </jdk>
+{% endfor %}

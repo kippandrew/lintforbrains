@@ -1,0 +1,1 @@
+include src/lintforbrains/templates/*.j2
