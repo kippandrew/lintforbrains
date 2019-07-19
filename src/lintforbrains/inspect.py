@@ -8,8 +8,6 @@ import lintforbrains.results
 
 _LOG = lintforbrains.logging.get_logger(__name__)
 
-PYCHARM_HOME = os.getenv('PYCHARM_HOME', '/opt/pycharm')
-
 
 class InspectorError(Exception):
     pass
@@ -24,7 +22,7 @@ class Inspection:
     results_dir: str
     source_dir: str
     output_dir: str
-    profile: str
+    profile_path: str
 
     configuration = lintforbrains.config.Configuration
 
@@ -45,9 +43,9 @@ class Inspection:
 
         self.configuration = configuration
 
-        self.profile = configuration.inspect.profile
-        if self.profile is None:
-            self.profile = os.path.join(self.project_dir, ".idea/inspectionProfiles/Project_Default.xml")
+        self.profile_path = configuration.inspect.profile
+        if self.profile_path is None:
+            self.profile_path = os.path.join(self.project_dir, ".idea/inspectionProfiles/Project_Default.xml")
 
         self.output_dir = self._prepare_output_dir()
 
@@ -66,7 +64,10 @@ class Inspection:
         :return:
         """
 
-        command = ["{}/bin/inspect.sh".format(PYCHARM_HOME), self.project_dir, self.profile, self.output_dir]
+        command = [os.path.join(lintforbrains.config.PYCHARM_ROOT, "bin", "inspect.sh"),
+                   self.project_dir,
+                   self.profile_path,
+                   self.output_dir]
 
         if self.source_dir:
             command.extend(["-d", self.source_dir])

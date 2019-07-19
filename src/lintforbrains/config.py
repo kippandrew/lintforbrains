@@ -7,6 +7,10 @@ import lintforbrains.logging
 
 _LOG = lintforbrains.logging.getLogger(__name__)
 
+PYCHARM_ROOT = os.getenv('PYCHARM_ROOT', '/opt/pycharm')
+
+PYBUILD_ROOT = os.getenv('PYBUILD_ROOT', '/usr/local/')
+
 _DEFAULT_INSPECT_RESULTS_DIR = "inspection-results/"
 
 _DEFAULT_INSPECT_SOURCE_DIR = None

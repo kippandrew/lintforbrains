@@ -61,12 +61,23 @@ def cli(ctx, debug: bool):
 @click.option('--sdk', default="python", type=click.Path(exists=True))
 @click.option('--sdk-name', default="Python SDK")
 @click.option('--sdk-type', default="Python SDK")
-def bootstrap(config_dir:str, sdk: str, sdk_name: str, sdk_type: str):
+def bootstrap(config_dir: str, sdk: str, sdk_name: str, sdk_type: str):
     """
 
     :return:
     """
-    lintforbrains.runtime.configure_sdk(config_dir, sdk, sdk_name, sdk_type)
+    lintforbrains.runtime.configure_python_sdk(config_dir, sdk, sdk_name, sdk_type)
+
+
+@cli.command()
+@click.argument('project_dir', type=click.Path(exists=True), default='.')
+def configure(project_dir: str):
+    """
+
+    :param project_dir:
+    :return:
+    """
+    lintforbrains.runtime.configure_python_sdk('default', '3.6.5')
 
 
 @cli.command()
