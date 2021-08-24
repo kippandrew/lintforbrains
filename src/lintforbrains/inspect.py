@@ -1,6 +1,7 @@
 import datetime as dt
 import os
 import subprocess
+import random
 
 import lintforbrains.config
 import lintforbrains.logging
@@ -22,6 +23,7 @@ class Inspection:
     results_dir: str
     source_dir: str
     output_dir: str
+    logfile_path: str
     profile_path: str
 
     configuration = lintforbrains.config.Configuration
@@ -34,14 +36,13 @@ class Inspection:
         :param configuration: project configuration
         """
         self.project_dir = os.path.abspath(project_dir)
+        self.configuration = configuration
 
         # results_dir is relative to project_dir
         self.results_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.results_dir))
 
         # source_dir is relative to project_dir
         self.source_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.source_dir))
-
-        self.configuration = configuration
 
         self.profile_path = configuration.inspect.profile
         if self.profile_path is None:
@@ -50,18 +51,19 @@ class Inspection:
         self.output_dir = self._prepare_output_dir()
 
     def _prepare_output_dir(self):
+        random_val = random.randint(0, 255)
         output_time = dt.datetime.now().strftime("%Y%m%dT%H%M%S")
-        output_dir = os.path.join(self.results_dir, "inspection-{}".format(output_time))
+        output_dir = os.path.join(self.results_dir, "inspection-{}-{}".format(output_time, random_val))
         os.makedirs(output_dir)
         _LOG.debug("Created inspection output dir: {}".format(output_dir))
         return output_dir
 
-    def run(self, debug_level=1) -> lintforbrains.results.InspectionResults:
+    def run(self, debug_level=1):
         """
         Run the inspection.
 
-        :param debug_level:
-        :return:
+        :param debug_level: inspection debug level
+        :return: inspection results
         """
 
         command = [os.path.join(lintforbrains.config.PYCHARM_ROOT, "bin", "inspect.sh"),
@@ -82,8 +84,3 @@ class Inspection:
         except subprocess.CalledProcessError as ex:
             raise InspectorError("Error running inspect (return code = {})".format(ex.returncode)) from ex
 
-        return lintforbrains.results.InspectionResults(self.output_dir,
-                                                       levels=self.configuration.inspect.levels,
-                                                       suppress=self.configuration.inspect.suppress,
-                                                       include_patterns=self.configuration.inspect.include,
-                                                       exclude_patterns=self.configuration.inspect.exclude)

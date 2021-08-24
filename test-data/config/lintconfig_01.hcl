@@ -1,27 +1,34 @@
+project {
+
+  python = "fake.version.number"
+
+  install = "fake install command"
+
+}
+
 inspect {
 
   source_dir = "fake-source/"
 
   results_dir = "fake-results/"
 
-  levels = [
-    "ERROR",
-    "WARNING",
+  output = "plain"
+
+  suppress_levels = [
+    "TYPO",
   ]
 
-  suppress = [
+  suppress_problems = [
     "SuppressMe"
   ]
 
-  include = [
+  include_files = [
     "src/include/me/*"
   ]
 
-  exclude = [
+  exclude_files = [
     "src/exclude/me/*"
   ]
-
-  output = "plain"
 
 }
 

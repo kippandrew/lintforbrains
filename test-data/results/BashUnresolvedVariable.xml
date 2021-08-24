@@ -1,0 +1,46 @@
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/clear-exchanges.sh</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/clear-exchanges.sh" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved variable</problem_class>
+  <description>Unresolved variable</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/clear-exchanges.sh</file>
+  <line>16</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/clear-exchanges.sh" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved variable</problem_class>
+  <description>Unresolved variable</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/clear-exchanges.sh</file>
+  <line>21</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/clear-exchanges.sh" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved variable</problem_class>
+  <description>Unresolved variable</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/clear-exchanges.sh</file>
+  <line>22</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/clear-exchanges.sh" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved variable</problem_class>
+  <description>Unresolved variable</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/version.sh</file>
+  <line>16</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/version.sh" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved variable</problem_class>
+  <description>Unresolved variable</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/version.sh</file>
+  <line>17</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/version.sh" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved variable</problem_class>
+  <description>Unresolved variable</description>
+</problem>
+</problems>

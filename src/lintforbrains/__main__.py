@@ -6,6 +6,7 @@ import click
 
 import lintforbrains.config
 import lintforbrains.inspect
+import lintforbrains.processor
 import lintforbrains.results
 import lintforbrains.runtime
 
@@ -51,10 +52,6 @@ def cli(ctx, debug: bool):
     else:
         _enable_normal_logging()
 
-    # # load configuration
-    # ctx.obj = lintforbrains.config.Configuration()
-    # ctx.obj.read(os.path.join(config_file))
-
 
 @cli.command()
 @click.argument('config_dir', type=click.Path())
@@ -88,12 +85,14 @@ def inspect(project_dir: str):
     :param project_dir:
     :return:
     """
-    inspection_config = lintforbrains.config.load_config(os.path.join(project_dir, _DEFAULT_CONFIG_FILE))
+    inspection_config_path = os.path.join(project_dir, _DEFAULT_CONFIG_FILE)
+
+    inspection_config = lintforbrains.config.load_config(inspection_config_path)
 
     inspection_results = lintforbrains.inspect.Inspection(project_dir, inspection_config).run(debug_level=2)
 
-    for p in inspection_results.problems:
-        print(p)
+    # inspection_processor = lintforbrains.processor.InspectionResultProcessor(inspection_results,
+    #                                                     )
 
 
 #

@@ -3,7 +3,7 @@ import os
 import typing
 import weakref
 
-from xml.etree import ElementTree as ET
+from lxml import etree
 
 import lintforbrains.logging
 
@@ -171,41 +171,37 @@ class InspectionResults:
     Inspection problems
     """
 
-    def __init__(self, results_dir: str, levels=None, suppress=None, include_patterns=None, exclude_patterns=None):
+    def __init__(self, results_dir: str):
         """
         Initialize instance of the InspectionResults class.
 
         :param results_dir: results directory
         """
-        self._parse_results(results_dir)
-
-    def _parse_results(self, results_dir):
-        """
-        Load results from the given directory
-
-        :param results_dir: result directory to load
-        """
         self.results_dir = results_dir
-        self.profile = self._parse_results_profile(results_dir)
-        self.problems = self._parse_results_problems(results_dir)
 
-    def _parse_results_profile(self, results_dir: str):
-        profile_path = os.path.join(results_dir, '.descriptions.xml')
+        self._load_results()
+
+    def _load_results(self):
+        self.profile = self._load_results_inspection_profile()
+        self.problems = self._load_results_inspection_problems()
+
+    def _load_results_inspection_profile(self):
+        profile_path = os.path.join(self.results_dir, '.descriptions.xml')
         _LOG.debug("Parsing {}".format(profile_path))
-        profile = self._parse_inspection_profile_file(profile_path)
+        profile = self._parse_inspection_profile_fromfile(profile_path)
         return profile
 
-    def _parse_results_problems(self, results_dir: str):
+    def _load_results_inspection_problems(self):
         problems = []
-        with os.scandir(results_dir) as dh:
+        with os.scandir(self.results_dir) as dh:
             for e in dh:
                 if e.is_file() and e.name != '.descriptions.xml':
                     _LOG.debug("Parsing {}".format(e.path))
                     inspection = os.path.splitext(os.path.basename(e.path))[0]
-                    problems.extend(self._parse_problems_file(inspection, e.path))
+                    problems.extend(self._parse_inspection_problems_fromfile(inspection, e.path))
         return problems
 
-    def _parse_inspection_profile_xml(self, e: ET.Element):
+    def _parse_inspection_profile_xml(self, e: etree.Element):
         """
         Parse an inspection profile XML element
         """
@@ -220,7 +216,7 @@ class InspectionResults:
 
         return profile
 
-    def _parse_inspection_group_xml(self, profile: InspectionProfile, e: ET.Element):
+    def _parse_inspection_group_xml(self, profile: InspectionProfile, e: etree.Element):
         """
         Parse an inspection group XML element
         """
@@ -235,7 +231,7 @@ class InspectionResults:
 
         return group
 
-    def _parse_inspection_rule_xml(self, group: InspectionGroup, e: ET.Element):
+    def _parse_inspection_rule_xml(self, group: InspectionGroup, e: etree.Element):
         """
         Parse an inspection rule XML element
         """
@@ -251,26 +247,19 @@ class InspectionResults:
 
         return rule
 
-    def _parse_inspection_profile_file(self, file: str):
+    def _parse_inspection_profile_fromfile(self, file: str):
         """
         Parse profile XML from a file
-
-        :param file: file name or file object
-        :return: inspection profile
         """
-        return self._parse_inspection_profile_xml(ET.parse(file).getroot())
+        return self._parse_inspection_profile_xml(etree.parse(file).getroot())
 
-    def _parse_problems_file(self, inspection: str, file: str):
+    def _parse_inspection_problems_fromfile(self, inspection: str, file: str):
         """
         Parse problems XML from a file
-
-        :param inspection: inspection name
-        :param file: file name or file handle
-        :return: list of inspection problems
         """
-        return self._parse_inspection_problems_xml(inspection, ET.parse(file).getroot())
+        return self._parse_inspection_problems_xml(inspection, etree.parse(file).getroot())
 
-    def _parse_inspection_problems_xml(self, problem_name: str, e: ET.Element):
+    def _parse_inspection_problems_xml(self, problem_name: str, e: etree.Element):
         """
         Parse problems XML element
         """
@@ -289,7 +278,7 @@ class InspectionResults:
 
         return problems
 
-    def _parse_inspection_problem_type_xml(self, problem_name: str, e: ET.Element):
+    def _parse_inspection_problem_type_xml(self, problem_name: str, e: etree.Element):
         problem_class_severity = e.get('severity')
         problem_class_description = e.text
 
@@ -297,21 +286,4 @@ class InspectionResults:
                                       problem_class_description,
                                       InspectionProblemSeverity(problem_class_severity))
 
-    # def _parse_problems_fromstring(self, inspection: str, source: str):
-    #     """
-    #     Parse problems XML from a string
-    #
-    #     :param inspection: inspection name
-    #     :param source: XML string
-    #     :return: list of inspection problems
-    #     """
-    #     return self._parse_inspection_problems_xml(inspection, et.fromstring(source))
 
-    # def _parse_inspection_profile_fromstring(self, source: str):
-    #     """
-    #     Parse profile XML from a string
-    #
-    #     :param source: XML string
-    #     :return: inspection profile
-    #     """
-    #     return self._parse_inspection_profile_xml(et.fromstring(source))

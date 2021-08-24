@@ -5,8 +5,6 @@ import schematics
 
 import lintforbrains.logging
 
-_LOG = lintforbrains.logging.getLogger(__name__)
-
 PYCHARM_ROOT = os.getenv('PYCHARM_ROOT', '/opt/pycharm')
 
 PYBUILD_ROOT = os.getenv('PYBUILD_ROOT', '/usr/local/')
@@ -17,13 +15,24 @@ _DEFAULT_INSPECT_SOURCE_DIR = None
 
 _DEFAULT_INSPECT_PROFILE = None
 
-_DEFAULT_INSPECT_LEVELS = ['ERROR', 'WARNING', 'WEAK WARNING']
+_DEFAULT_INSPECT_OUTPUT = 'plain'
+
+_LOG = lintforbrains.logging.getLogger(__name__)
 
 
 class Configuration(schematics.models.Model):
     """
     TODO: needs class summary
     """
+
+    class ProjectSection(schematics.models.Model):
+        """
+        ProjectSection defines configure command configuration
+        """
+
+        python = schematics.types.StringType()
+
+        install = schematics.types.StringType()
 
     class InspectSection(schematics.models.Model):
         """
@@ -36,20 +45,22 @@ class Configuration(schematics.models.Model):
 
         profile = schematics.types.StringType(default=_DEFAULT_INSPECT_PROFILE)
 
-        levels = schematics.types.ListType(schematics.types.StringType, default=_DEFAULT_INSPECT_LEVELS)
+        output = schematics.types.StringType(default=_DEFAULT_INSPECT_OUTPUT)
 
-        suppress = schematics.types.ListType(schematics.types.StringType)
+        suppress_levels = schematics.types.ListType(schematics.types.StringType)
 
-        include = schematics.types.ListType(schematics.types.StringType)
+        suppress_problems = schematics.types.ListType(schematics.types.StringType)
 
-        exclude = schematics.types.ListType(schematics.types.StringType)
+        include_files = schematics.types.ListType(schematics.types.StringType)
 
-        output = schematics.types.StringType()
+        exclude_files = schematics.types.ListType(schematics.types.StringType)
 
     class ReportSection(schematics.models.Model):
         """
         ReportSection defines report command configuration
         """
+
+    project: ProjectSection = schematics.types.ModelType(ProjectSection)
 
     inspect: InspectSection = schematics.types.ModelType(InspectSection)
 
@@ -66,6 +77,7 @@ def load_config(config_file, validate=True):
         config = Configuration(hcl.load(fh))
 
     if validate:
+        _LOG.debug("Validating configuration file: {}".format(config_file))
         config.validate()
 
     return config

@@ -1,5 +1,6 @@
 from unittest import mock
 
+import lintforbrains.config
 import lintforbrains.inspect
 
 from . import TestCase
@@ -9,20 +10,31 @@ class InspectorTestCase(TestCase):
 
     @mock.patch('lintforbrains.inspect.subprocess')
     def test_run(self, mock_subprocess):
-        inspector = lintforbrains.inspect.Inspection()
-        inspector.run("fake-project-dir/", 'fake-results-dir/')
+
+        mock_config = mock.MagicMock()
+        mock_config.inspect.profile = 'fake-profile-dir/fake-profile.xml'
+        mock_config.inspect.results_dir = 'fake-results-dir/'
+        mock_config.inspect.source_dir = 'src/'
+
+        inspection = lintforbrains.inspect.Inspection("fake-project-dir/", mock_config)
+        inspection.run()
 
         mock_subprocess.run.assert_called_with(['/opt/pycharm/bin/inspect.sh',
                                                 'fake-project-dir/',
-                                                'fake-project-dir/.idea/inspectionProfiles/Project_Default.xml',
+                                                'fake-profile-dir/fake-profile.xml',
                                                 'fake-results-dir/',
                                                 '-v1'],
                                                check=True)
 
     @mock.patch('lintforbrains.inspect.subprocess')
     def test_run_with_inspect_dir(self, mock_subprocess):
-        inspector = lintforbrains.inspect.Inspection()
-        inspector.run("fake-project-dir/", 'fake-results-dir/', inspection_dir='fake-project-dir/src')
+
+        mock_config = mock.MagicMock()
+        mock_config.inspect.results_dir = 'fake-results-dir/'
+        mock_config.inspect.source_dir = 'src/'
+
+        inspector = lintforbrains.inspect.Inspection("fake-project-dir/", mock_config)
+        inspector.run()
 
         mock_subprocess.run.assert_called_with(['/opt/pycharm/bin/inspect.sh',
                                                 'fake-project-dir/',
@@ -32,4 +44,3 @@ class InspectorTestCase(TestCase):
                                                 'fake-project-dir/src',
                                                 '-v1'],
                                                check=True)
-        pass

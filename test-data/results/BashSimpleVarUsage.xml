@@ -1,0 +1,38 @@
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/purge-ingress.sh</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/purge-ingress.sh" />
+  <problem_class severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Simple variable usage</problem_class>
+  <description>Simple variable usage</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/purge-services.sh</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/purge-services.sh" />
+  <problem_class severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Simple variable usage</problem_class>
+  <description>Simple variable usage</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/clear-exchanges.sh</file>
+  <line>28</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/clear-exchanges.sh" />
+  <problem_class severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Simple variable usage</problem_class>
+  <description>Simple variable usage</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/scripts/clear-exchanges.sh</file>
+  <line>28</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/scripts/clear-exchanges.sh" />
+  <problem_class severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Simple variable usage</problem_class>
+  <description>Simple variable usage</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/version.sh</file>
+  <line>23</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/version.sh" />
+  <problem_class severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Simple variable usage</problem_class>
+  <description>Simple variable usage</description>
+</problem>
+</problems>

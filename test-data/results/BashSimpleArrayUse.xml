@@ -1,0 +1,10 @@
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/version.sh</file>
+  <line>61</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/version.sh" />
+  <problem_class severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Simple use of array variable</problem_class>
+  <description>Simple use of array variable</description>
+</problem>
+</problems>

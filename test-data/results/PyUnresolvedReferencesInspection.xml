@@ -1,0 +1,100 @@
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py</file>
+  <line>5</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py</file>
+  <line>2</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/monitor/tasks/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/pod.py</file>
+  <line>136</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/pod.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved attribute reference 'kubernetes_pod_name' for class 'KubernetesPodProvider'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>26</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="WARNING" attribute_key="INFO_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Function '__init__' does not have a parameter 'bootstrap_config_map'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/utilities/storage.py</file>
+  <line>61</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/utilities/storage.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved attribute reference 'find_volume' for class 'StorageAPIClient'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/utilities/storage.py</file>
+  <line>82</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/utilities/storage.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved attribute reference 'find_volume' for class 'StorageAPIClient'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py</file>
+  <line>12</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>42</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unresolved attribute reference '__prepare__' for class 'type'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>14</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>1</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks.py</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks.py" />
+  <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unresolved references</problem_class>
+  <description>Unused import statement</description>
+</problem>
+</problems>

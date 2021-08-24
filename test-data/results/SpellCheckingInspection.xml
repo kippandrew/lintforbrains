@@ -1,0 +1,1650 @@
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/bin/lucid-scheduler-monitor</file>
+  <line>20</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/bin/lucid-scheduler-monitor" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'prog'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/bin/lucid-scheduler-worker</file>
+  <line>20</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/bin/lucid-scheduler-worker" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'prog'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/bin/lucid-scheduler-api</file>
+  <line>22</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/bin/lucid-scheduler-api" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'prog'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>96</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'appdir'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>104</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'websockets'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>105</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'websockets'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>106</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'websockets'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>106</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'websockets'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>109</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>110</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>111</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>112</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>131</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sockjs'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>139</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'passthrough'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>139</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'creds'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>140</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'passthrough'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>140</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'creds'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>142</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>143</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>144</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>144</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>145</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>145</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>146</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py</file>
+  <line>162</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autoescape'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py</file>
+  <line>32</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xlarge'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py</file>
+  <line>36</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xxlarge'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py</file>
+  <line>40</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xxxlarge'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py</file>
+  <line>61</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/runtime/__init__.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'RUNTIMES'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler.egg-info/SOURCES.txt</file>
+  <line>18</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler.egg-info/SOURCES.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'supervisord'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>2</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Bgkqhki'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>2</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Ewprd'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'XDTE'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'XDTI'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'FTETMBEGA'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>4</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Rlcz'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>4</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Ihvc'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>5</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Wosvc'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>5</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Zlaze'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Nloo'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Imipi'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'YAJG'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Uvhuhqwx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>8</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Swfh'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>9</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Juhgg'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>9</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'zyqy'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>9</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Dduh'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Nxxn'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'YDVR'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'PAQH'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'BAQD'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>11</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'QFMAMB'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>12</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Ngaub'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>12</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Tvzffeo'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>13</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Gobez'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>13</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'jfuu'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>13</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'olwg'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>13</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Kugp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>13</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'GXDHZV'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>14</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'QRJO'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>14</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Pvcr'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Iinpibl'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Udyx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Mwhq'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-staging-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'BTAHS'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>2</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Bgkqhki'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>2</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Ewprd'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'XDTE'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'XDTI'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Nlow'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>4</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Rlcz'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>4</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Ihvc'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>5</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'IBFZT'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>5</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Yaglr'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'GRNDG'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Pfhyd'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Shtr'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>6</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Ggbb'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'IMXLV'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xint'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'notfwtex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>8</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Pkaqek'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>8</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Nsrx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>8</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'LJWV'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>9</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Mpsyt'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>9</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'TUOE'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Mtaefr'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'YDVR'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'PAQH'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>10</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'BAQD'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>11</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'QFMAMB'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>11</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Mixs'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>12</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'mbfl'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>13</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Delh'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>14</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Uwjjek'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>14</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Glbs'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>14</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Esqyw'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Gupo'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Yyiq'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'TJIC'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Idchpw'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem</file>
+  <line>16</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/tls/lucid-production-eks01.pem" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Atpd'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/logging.yml</file>
+  <line>62</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/logging.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'asctime'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/logging.yml</file>
+  <line>64</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/logging.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'asctime'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/logging.yml</file>
+  <line>64</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/logging.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'levelname'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/docker.yml</file>
+  <line>48</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/docker.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/staging.yml</file>
+  <line>58</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/staging.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/staging.yml</file>
+  <line>85</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/staging.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'datadog'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/testing.yml</file>
+  <line>48</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/testing.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/production.yml</file>
+  <line>56</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/production.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/production.yml</file>
+  <line>83</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/production.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'datadog'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/conf/development.yml</file>
+  <line>53</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/conf/development.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py</file>
+  <line>20</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'traefik'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py</file>
+  <line>62</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'traefik'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py</file>
+  <line>198</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/ingress.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'indicies'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>195</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'ioloop'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>281</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'snarky'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/pipeline/test_terminate_pipeline.py</file>
+  <line>46</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/pipeline/test_terminate_pipeline.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'derp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/pipeline/test_deploy_pipeline.py</file>
+  <line>134</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/pipeline/test_deploy_pipeline.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'derp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/test_ingress_tasks.py</file>
+  <line>43</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/test_ingress_tasks.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'derp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/test_service_tasks.py</file>
+  <line>43</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/test_service_tasks.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'derp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks_integration.py</file>
+  <line>57</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks_integration.py</file>
+  <line>99</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_runtime.py</file>
+  <line>79</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_runtime.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xlarge'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_rstudio.py</file>
+  <line>20</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_rstudio.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xenial'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_rstudio.py</file>
+  <line>26</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_rstudio.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xenial'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_rstudio.py</file>
+  <line>42</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_rstudio.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xenial'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_rstudio.py</file>
+  <line>96</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_rstudio.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xenial'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_rstudio.py</file>
+  <line>135</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_rstudio.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xenial'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_rstudio.py</file>
+  <line>184</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_rstudio.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'daemonize'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>174</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>175</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'logplex'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>185</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'websockets'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>204</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'appdir'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>206</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>207</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>208</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/runtime/test_connect.py</file>
+  <line>209</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/runtime/test_connect.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'sched'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks.py</file>
+  <line>51</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/worker/tasks/test_controller_tasks.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'derp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_service.py</file>
+  <line>171</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_service.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'localdomain'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/helpers/kubernetes.py</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/helpers/kubernetes.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'KUBE'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/helpers/kubernetes.py</file>
+  <line>15</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/helpers/kubernetes.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'minikube'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/helpers/kubernetes.py</file>
+  <line>23</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/helpers/kubernetes.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'kubectrl'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/helpers/kubernetes.py</file>
+  <line>28</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/helpers/kubernetes.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'kubeconfig'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_pod_integration.py</file>
+  <line>34</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_pod_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'abcdef'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_pod_integration.py</file>
+  <line>44</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_pod_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_service_integration.py</file>
+  <line>134</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_service_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'abcdef'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_service_integration.py</file>
+  <line>144</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_service_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_service_integration.py</file>
+  <line>149</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_service_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'abcdef'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>1</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'supervisord'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>2</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nodaemon'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>3</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'supervisord'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>4</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pidfile'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>7</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'supervisord'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>8</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'childlogdir'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>8</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'supervisord'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>16</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autostart'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>17</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autorestart'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>18</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>19</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>26</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autostart'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>27</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autorestart'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>28</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>29</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>36</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autostart'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>37</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'autorestart'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>38</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker/supervisord.cfg</file>
+  <line>39</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker/supervisord.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'maxbytes'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>4</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xenial'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>14</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'PYTHONPATH'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>25</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'shasum'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pycache'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>59</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'kube'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>60</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'KUBE'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>60</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'minikube'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Makefile</file>
+  <line>68</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Makefile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'amazonaws'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/.coverage</file>
+  <line>1</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/.coverage" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'akipp'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/.gitignore</file>
+  <line>20</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/.gitignore" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pycache'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/.gitignore</file>
+  <line>30</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/.gitignore" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nosetests'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/.gitignore</file>
+  <line>32</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/.gitignore" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'noseids'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/.gitignore</file>
+  <line>40</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/.gitignore" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pydevproject'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/setup.cfg</file>
+  <line>1</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/setup.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nosetests'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/setup.cfg</file>
+  <line>3</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/setup.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'rednose'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/setup.cfg</file>
+  <line>5</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/setup.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xunit'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/setup.cfg</file>
+  <line>6</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/setup.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'xunit'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/setup.cfg</file>
+  <line>6</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/setup.cfg" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nosetests'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/version.sh</file>
+  <line>22</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/version.sh" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'mnrb'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Jenkinsfile</file>
+  <line>4</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Jenkinsfile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Discarder'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Jenkinsfile</file>
+  <line>4</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Jenkinsfile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'Rotator'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Jenkinsfile</file>
+  <line>38</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Jenkinsfile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nosetests'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Jenkinsfile</file>
+  <line>44</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Jenkinsfile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'cobertura'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/Jenkinsfile</file>
+  <line>104</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/Jenkinsfile" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'hostedapps'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>10</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pyenv'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>56</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'minikube'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>58</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'minikube'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>62</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'minikube'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/README.md</file>
+  <line>64</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/README.md" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'dependences'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>1</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'boto'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>2</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'datadog'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>4</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'jsonschema'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>5</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pika'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>6</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pydevd'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>7</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'pyparsing'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>8</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'dateutil'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/requirements.txt</file>
+  <line>13</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'toro'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/setup.py</file>
+  <line>30</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/setup.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'supervisord'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/dev-requirements.txt</file>
+  <line>4</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/dev-requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'docopt'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/dev-requirements.txt</file>
+  <line>6</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/dev-requirements.txt" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'rednose'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker-compose.yml</file>
+  <line>19</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker-compose.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'rabbitmq'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docker-compose.yml</file>
+  <line>22</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docker-compose.yml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'MAIGEMAOJMAYGFTAAUMB'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>1</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nosetests'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/nosetests.xml</file>
+  <line>34</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/nosetests.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'utilitites'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>124</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>197</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>245</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>319</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>471</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>547</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/tests/providers/test_controller_integration.py</file>
+  <line>597</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/tests/providers/test_controller_integration.py" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'nginx'</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/coverage.xml</file>
+  <line>6</line>
+  <module>lucid-scheduler</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/coverage.xml" />
+  <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'akipp'</description>
+</problem>
+</problems>

@@ -1,0 +1,37 @@
+<problems is_local_tool="true">
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>126</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type checker</problem_class>
+  <description>Expected type 'Union[int, slice]', got 'str' instead</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>129</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type checker</problem_class>
+  <description>Expected type 'Union[int, slice]', got 'str' instead</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>130</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type checker</problem_class>
+  <description>Expected type 'Union[int, slice]', got 'str' instead</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>133</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type checker</problem_class>
+  <description>Expected type 'Union[int, slice]', got 'str' instead</description>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py</file>
+  <line>134</line>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/lucid_scheduler/providers/__init__.py" />
+  <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type checker</problem_class>
+  <description>Expected type 'Union[int, slice]', got 'str' instead</description>
+</problem>
+</problems>

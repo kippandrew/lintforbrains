@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+
+  lintforbrains:
+    build:
+      context: .
+    volumes:
+     - .:/opt/lintforbains
+    working_dir: /opt/lintforbrains
