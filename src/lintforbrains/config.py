@@ -7,7 +7,7 @@ import lintforbrains.logging
 
 PYCHARM_ROOT = os.getenv('PYCHARM_ROOT', '/opt/pycharm')
 
-PYBUILD_ROOT = os.getenv('PYBUILD_ROOT', '/usr/local/')
+DEFAULT_CONFIG_FILE = '.lintconfig'
 
 _DEFAULT_INSPECT_RESULTS_DIR = "inspection-results/"
 
@@ -45,12 +45,6 @@ class Configuration(schematics.models.Model):
 
         profile = schematics.types.StringType(default=_DEFAULT_INSPECT_PROFILE)
 
-        output = schematics.types.StringType(default=_DEFAULT_INSPECT_OUTPUT)
-
-        suppress_levels = schematics.types.ListType(schematics.types.StringType)
-
-        suppress_problems = schematics.types.ListType(schematics.types.StringType)
-
         include_files = schematics.types.ListType(schematics.types.StringType)
 
         exclude_files = schematics.types.ListType(schematics.types.StringType)
@@ -59,6 +53,14 @@ class Configuration(schematics.models.Model):
         """
         ReportSection defines report command configuration
         """
+
+        output = schematics.types.StringType(default=_DEFAULT_INSPECT_OUTPUT)
+
+        suppress_severity = schematics.types.ListType(schematics.types.StringType)
+
+        suppress_files = schematics.types.ListType(schematics.types.StringType)
+
+        suppress_problems = schematics.types.ListType(schematics.types.StringType)
 
     project: ProjectSection = schematics.types.ModelType(ProjectSection)
 

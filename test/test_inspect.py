@@ -6,7 +6,7 @@ import lintforbrains.inspect
 from . import TestCase
 
 
-class InspectorTestCase(TestCase):
+class InspectionTestCase(TestCase):
 
     @mock.patch('lintforbrains.inspect.subprocess')
     def test_run(self, mock_subprocess):
@@ -16,7 +16,7 @@ class InspectorTestCase(TestCase):
         mock_config.inspect.results_dir = 'fake-results-dir/'
         mock_config.inspect.source_dir = 'src/'
 
-        inspection = lintforbrains.inspect.Inspection("fake-project-dir/", mock_config)
+        inspection = lintforbrains.inspect.Inspector("fake-project-dir/", mock_config)
         inspection.run()
 
         mock_subprocess.run.assert_called_with(['/opt/pycharm/bin/inspect.sh',
@@ -33,7 +33,7 @@ class InspectorTestCase(TestCase):
         mock_config.inspect.results_dir = 'fake-results-dir/'
         mock_config.inspect.source_dir = 'src/'
 
-        inspector = lintforbrains.inspect.Inspection("fake-project-dir/", mock_config)
+        inspector = lintforbrains.inspect.Inspector("fake-project-dir/", mock_config)
         inspector.run()
 
         mock_subprocess.run.assert_called_with(['/opt/pycharm/bin/inspect.sh',

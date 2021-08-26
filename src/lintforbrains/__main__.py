@@ -6,13 +6,16 @@ import click
 
 import lintforbrains.config
 import lintforbrains.inspect
-import lintforbrains.processor
-import lintforbrains.results
-import lintforbrains.runtime
+import lintforbrains.logging
+import lintforbrains.report
+import lintforbrains.setup
 
+_DEFAULT_PYTHON_PATH = '/usr/bin/python'
+_DEFAULT_PYCHARM_VERSION = '2021.2'
+_DEFAULT_PYCHARM_EDITION = 'community'
 _DEFAULT_PROJECT_DIR = os.getenv('PROJECT_DIR', '.')
 
-_DEFAULT_CONFIG_FILE = '.lintconfig'
+_LOG = lintforbrains.logging.getLogger(__name__)
 
 
 def _enable_debug_logging():
@@ -38,10 +41,6 @@ def _configure_logging(level):
     log.setLevel(level)
 
 
-def _load_configuration(config_file):
-    pass
-
-
 @click.group()
 @click.option('--debug/--no-debug', default=False, help="enable debug")
 @click.pass_context
@@ -54,54 +53,40 @@ def cli(ctx, debug: bool):
 
 
 @cli.command()
-@click.argument('config_dir', type=click.Path())
-@click.option('--sdk', default="python", type=click.Path(exists=True))
-@click.option('--sdk-name', default="Python SDK")
-@click.option('--sdk-type', default="Python SDK")
-def bootstrap(config_dir: str, sdk: str, sdk_name: str, sdk_type: str):
+@click.option('python_bin', '--python', type=str, default=_DEFAULT_PYTHON_PATH)
+@click.option('pycharm_version', '--pycharm-version', type=str, default=_DEFAULT_PYCHARM_VERSION)
+@click.option('pycharm_edition', '--pycharm-edition', type=str, default=_DEFAULT_PYCHARM_EDITION)
+@click.pass_context
+def setup(ctx, python_bin: str, pycharm_version: str, pycharm_edition: str):
     """
-
-    :return:
+    Setup lintforbrains
     """
-    lintforbrains.runtime.configure_python_sdk(config_dir, sdk, sdk_name, sdk_type)
+    return lintforbrains.setup.run_setup(pycharm_edition,
+                                         pycharm_version,
+                                         python_bin)
 
 
 @cli.command()
 @click.argument('project_dir', type=click.Path(exists=True), default='.')
-def configure(project_dir: str):
+@click.option('config_file', '--config', type=click.Path(exists=True), help="config file")
+@click.pass_context
+def inspect(ctx, project_dir: str, config_file: str):
     """
-
-    :param project_dir:
-    :return:
+    Run inspection
     """
-    lintforbrains.runtime.configure_python_sdk('default', '3.6.5')
+    return lintforbrains.inspect.run_inspect(project_dir, config_file)
 
 
 @cli.command()
 @click.argument('project_dir', type=click.Path(exists=True), default='.')
-def inspect(project_dir: str):
+@click.option('config_file', '--config', type=click.Path(exists=True), help="config file")
+@click.option('results_dir', '--results', type=click.Path(exists=True), help="results dir")
+@click.pass_context
+def report(ctx, project_dir: str, config_file: str, results_dir: str):
     """
-
-    :param project_dir:
-    :return:
+    View inspection results
     """
-    inspection_config_path = os.path.join(project_dir, _DEFAULT_CONFIG_FILE)
-
-    inspection_config = lintforbrains.config.load_config(inspection_config_path)
-
-    inspection_results = lintforbrains.inspect.Inspection(project_dir, inspection_config).run(debug_level=2)
-
-    # inspection_processor = lintforbrains.processor.InspectionResultProcessor(inspection_results,
-    #                                                     )
-
-
-#
-# @cli.command()
-# @click.option('--project-dir', '-p', default=_DEFAULT_PROJECT_DIR, help='project directory')
-# def report(results_dir: str):
-#     results = lintforbrains.results.InspectionResults(results_dir)
-#     for p in results.problems:
-#         print(p)
+    return lintforbrains.report.run_report(project_dir, config_file, results_dir)
 
 
 if __name__ == "__main__":

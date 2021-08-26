@@ -7,14 +7,36 @@ import lintforbrains.config
 import lintforbrains.logging
 import lintforbrains.results
 
+from lintforbrains.utilities import abort
+
 _LOG = lintforbrains.logging.get_logger(__name__)
 
 
-class InspectorError(Exception):
+def run_inspect(project_dir: str, config_file: str) -> int:
+    """
+    Run the inspect command
+    """
+
+    # load configuration
+    try:
+        if config_file is None:
+            config_file = os.path.join(project_dir, lintforbrains.config.DEFAULT_CONFIG_FILE)
+        inspection_configuration = lintforbrains.config.load_config(config_file)
+    except FileNotFoundError:
+        return abort(f"Failed to load configuration file: {config_file}")
+
+    # run inspector
+    inspector = Inspector(project_dir, inspection_configuration)
+    inspector.run(debug_level=2)
+
+    return 0
+
+
+class InspectionError(Exception):
     pass
 
 
-class Inspection:
+class Inspector:
     """
     TODO: needs class summary
     """
@@ -35,7 +57,7 @@ class Inspection:
         :param project_dir: project directory
         :param configuration: project configuration
         """
-        self.project_dir = os.path.abspath(project_dir)
+        self.project_dir = os.path.normpath(project_dir)
         self.configuration = configuration
 
         # results_dir is relative to project_dir
@@ -79,8 +101,13 @@ class Inspection:
 
         _LOG.debug("Executing command: {}".format(command))
 
-        try:
-            subprocess.run(command, check=True)
-        except subprocess.CalledProcessError as ex:
-            raise InspectorError("Error running inspect (return code = {})".format(ex.returncode)) from ex
+        command_logfile_path = os.path.join(self.output_dir, "inspect.log")
 
+        try:
+            _LOG.debug(f"Writing inspector output to {command_logfile_path}")
+            with open(command_logfile_path, "w") as outfile:
+                subprocess.run(command, stdout=outfile, stderr=outfile, check=True)
+        except subprocess.CalledProcessError as ex:
+            raise InspectionError("Error running inspect (return code = {})".format(ex.returncode)) from ex
+
+        _LOG.info(f"Inspection results written to {self.results_dir}")

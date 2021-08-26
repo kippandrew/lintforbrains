@@ -5,7 +5,6 @@ test:
 	PYTHONPATH=$(shell pwd)/src coverage run -m nose test/
 	PYTHONPATH=$(shell pwd)/src coverage report
 
-
 sdist:
 	python3 setup.py sdist
 	(cd dist/ && shasum lintforbrains-$(VERSION).tar.gz > lintforbrains-$(VERSION).tar.gz.sha)

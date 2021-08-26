@@ -13,7 +13,7 @@ class ConfigTestCase(TestCase):
 
         self.assertEqual(config.inspect.source_dir, 'fake-source/')
         self.assertEqual(config.inspect.results_dir, 'fake-results/')
-        self.assertEqual(config.inspect.suppress_levels, ['TYPO'])
+        self.assertEqual(config.inspect.suppress_severity, ['TYPO'])
         self.assertEqual(config.inspect.suppress_problems, ['SuppressMe'])
         self.assertEqual(config.inspect.include_files, ['src/include/me/*'])
         self.assertEqual(config.inspect.exclude_files, ['src/exclude/me/*'])

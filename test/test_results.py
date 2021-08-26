@@ -35,23 +35,17 @@ class ProblemParserTestCase(TestCase):
         problems = lintforbrains.results._parse_problems_fromstring("PyPep8Inspection", self.PYTHON_PROBLEMS)
 
         self.assertListEqual([
-            lintforbrains.results.InspectionProblem(
-                    lintforbrains.results.InspectionProblemClass(
-                            "PyPep8Inspection",
-                            "PEP 8 coding style violation",
-                            lintforbrains.results.InspectionProblemSeverity.WEAK_WARNING),
-                    "PEP 8: module level import not at top of file",
-                    "file://$PROJECT_DIR$/src/example_project/api/handler/__init__.py",
-                    24),
+            lintforbrains.results.InspectionProblem(lintforbrains.results.InspectionProblemClass(
+                "PyPep8Inspection",
+                "PEP 8 coding style violation",
+                lintforbrains.results.InspectionProblemSeverity.WEAK_WARNING),
+                24,, "PEP 8: module level import not at top of file", "file://$PROJECT_DIR$/src/example_project/api/handler/__init__.py",,
 
-            lintforbrains.results.InspectionProblem(
-                    lintforbrains.results.InspectionProblemClass(
-                            "PyPep8Inspection",
-                            "PEP 8 coding style violation",
-                            lintforbrains.results.InspectionProblemSeverity.WEAK_WARNING
-                    ),
-                    "PEP 8: module level import not at top of file",
-                    "file://$PROJECT_DIR$/src/example_project/providers/__init__.py",
-                    306),
+            lintforbrains.results.InspectionProblem(lintforbrains.results.InspectionProblemClass(
+                "PyPep8Inspection",
+                "PEP 8 coding style violation",
+                lintforbrains.results.InspectionProblemSeverity.WEAK_WARNING
+            ),
+                306,, "PEP 8: module level import not at top of file", "file://$PROJECT_DIR$/src/example_project/providers/__init__.py",,
 
         ], problems)
