@@ -3,7 +3,7 @@ import os
 import hcl
 import schematics
 
-import lintforbrains.logging
+from lintforbrains import logging
 
 PYCHARM_ROOT = os.getenv('PYCHARM_ROOT', '/opt/pycharm')
 
@@ -17,22 +17,13 @@ _DEFAULT_INSPECT_PROFILE = None
 
 _DEFAULT_INSPECT_OUTPUT = 'plain'
 
-_LOG = lintforbrains.logging.getLogger(__name__)
+_LOG = logging.get_logger(__name__)
 
 
 class Configuration(schematics.models.Model):
     """
     TODO: needs class summary
     """
-
-    class ProjectSection(schematics.models.Model):
-        """
-        ProjectSection defines configure command configuration
-        """
-
-        python = schematics.types.StringType()
-
-        install = schematics.types.StringType()
 
     class InspectSection(schematics.models.Model):
         """
@@ -61,8 +52,6 @@ class Configuration(schematics.models.Model):
         suppress_files = schematics.types.ListType(schematics.types.StringType)
 
         suppress_problems = schematics.types.ListType(schematics.types.StringType)
-
-    project: ProjectSection = schematics.types.ModelType(ProjectSection)
 
     inspect: InspectSection = schematics.types.ModelType(InspectSection)
 

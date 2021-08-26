@@ -5,25 +5,19 @@ import typing
 
 from lxml import etree
 
-import lintforbrains.config
-import lintforbrains.logging
+from lintforbrains import config
+from lintforbrains import logging
 
 from lintforbrains.utilities import substitute
 
-__all__ = [
-    'latest_results_dir',
-    'InspectionResults',
-    'InspectionProblem',
-    'InspectionProblemSeverity',
-    'InspectionProfile',
-    'InspectionGroup',
-    'InspectionType',
-]
-
-_LOG = lintforbrains.logging.get_logger(__name__)
+_LOG = logging.get_logger(__name__)
 
 
-def latest_results_dir(project_dir: str, configuration: lintforbrains.config.Configuration):
+def latest_results_dir(project_dir: str, configuration: config.Configuration):
+    """
+    Return the most recent inspection result for the given project dir.
+    """
+
     results_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.results_dir))
 
     most_recent_results_time = None
@@ -43,7 +37,7 @@ def latest_results_dir(project_dir: str, configuration: lintforbrains.config.Con
 
 class InspectionProfile:
     """
-    TODO: needs class summary
+    The InspectionProfile class represent a inspection profile.
     """
 
     groups: typing.MutableMapping[str, 'InspectionGroup']
@@ -60,7 +54,7 @@ class InspectionProfile:
 
 class InspectionGroup:
     """
-    TODO: needs class summary
+    The InspectionGroup class represents a collection of related inspections in an inspection profile.
     """
     inspections: typing.MutableMapping[str, 'InspectionType']
 
@@ -96,7 +90,7 @@ class InspectionGroup:
 
 class InspectionType:
     """
-    TODO: needs class summary
+    The InspectionType class represents an inspection in an inspection profile.
     """
 
     group: InspectionGroup
@@ -143,7 +137,7 @@ class InspectionType:
 
 class InspectionProblemSeverity(enum.Enum):
     """
-    TODO: needs class summary
+    The InspectionProblemSeverity class Represents the severity of an inspection problem.
     """
 
     TYPO = 'TYPO'
@@ -153,46 +147,9 @@ class InspectionProblemSeverity(enum.Enum):
     ERROR = 'ERROR'
 
 
-# class InspectionProblemClass:
-#     """
-#     TODO: needs class summary
-#     """
-#
-#     def __init__(self,
-#                  class_inspection: InspectionType,
-#                  class_description: str,
-#                  class_severity: InspectionProblemSeverity):
-#         """
-#         Initialize new instance of the InspectionProblemClass class.
-#
-#         :param class_inspection: problem class inspection type
-#         :param class_description: problem class description
-#         :param class_severity: problem class severity
-#         """
-#         self.inspection = class_inspection
-#         self.description = class_description
-#         self.severity = class_severity
-#
-#     def __lt__(self, other):
-#         if isinstance(other, InspectionProblemClass):
-#             return self.inspection.name < other.inspection.name
-#         else:
-#             return NotImplemented
-#
-#     def __eq__(self, other):
-#         if isinstance(other, InspectionProblemClass):
-#             return (self.severity == other.severity and
-#                     self.description == other.description)
-#         else:
-#             return NotImplemented
-#
-#     def __str__(self):
-#         return f"[{self.severity.value}] [{self.inspection}] {self.description}"
-
-
 class InspectionProblem:
     """
-    TODO: needs class summary
+    The InspectionProblem class represents an inspection problem.
     """
 
     def __init__(self, inspection_type: InspectionType, problem_severity: InspectionProblemSeverity,
@@ -225,10 +182,6 @@ class InspectionProblem:
         else:
             return NotImplemented
 
-    @property
-    def snippet(self):
-        pass
-
     def __str__(self):
         return f"{self.type} {self.details} at {self.file}:{self.line}"
 
@@ -248,7 +201,7 @@ class InspectionResults:
     Inspection problems
     """
 
-    def __init__(self, project_dir: str, results_dir: str, configuration: lintforbrains.config.Configuration):
+    def __init__(self, project_dir: str, results_dir: str, configuration: config.Configuration):
         """
         Initialize instance of the InspectionResults class.
 
