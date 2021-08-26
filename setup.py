@@ -18,8 +18,18 @@ def get_packages():
     return find_packages(where='src/')
 
 
+def get_version():
+    """
+    Return the package version
+    """
+    f = open('version.txt')
+    version = ''.join(f.readlines()).rstrip()
+    f.close()
+    return version
+
+
 setup(name='lintforbrains',
-      version='0.1',
+      version=get_version(),
       description='',
       url='http://github.com/kippandrew/lintforbrains',
       author='Andy Kipp',

@@ -69,8 +69,10 @@ def _inspect_python_sdk(python_home: str) -> PythonSDKInfo:
     try:
         result = subprocess.run(command,
                                 stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE,
-                                text=True, check=True)
+                                stderr=subprocess.STDOUT,
+                                encoding='utf-8',
+                                universal_newlines=True,
+                                check=True)
     except subprocess.CalledProcessError as ex:
         raise RuntimeError("Error inspecting ProjectRuntime (return code = {})".format(ex.returncode)) from ex
 
@@ -84,12 +86,12 @@ def _inspect_python_sdk(python_home: str) -> PythonSDKInfo:
     try:
         result = subprocess.run(command,
                                 stdout=subprocess.PIPE,
-                                stderr=subprocess.PIPE,
-                                text=True,
+                                stderr=subprocess.STDOUT,
+                                encoding='utf-8',
+                                universal_newlines=True,
                                 check=True)
     except subprocess.CalledProcessError as ex:
         raise RuntimeError("Error inspecting ProjectRuntime (return code = {})".format(ex.returncode)) from ex
-
 
     python_libs = result.stdout.rstrip().splitlines()
 
@@ -100,68 +102,9 @@ def _inspect_python_sdk(python_home: str) -> PythonSDKInfo:
                          python_libs)
 
 
-# def _install_python_sdk(python_sdk_version: str,
-#                         python_sdk_install_path: str,
-#                         python_sdk_install_opts: typing.Mapping[dict, dict] = None,
-#                         verbose=False):
-#     """
-#     TODO: needs summary
-#
-#     :param python_sdk_version:
-#     :param python_sdk_install_path:
-#     :param python_sdk_install_opts:
-#     :return:
-#     """
-#
-#     _LOG.info("Installing Python {} to {} (Options {})".format(python_sdk_version,
-#                                                        python_sdk_install_path,
-#                                                        python_sdk_install_opts))
-#
-#     command = [os.path.join(lintforbrains.config.PYBUILD_ROOT, 'bin', 'python-build')]
-#
-#     if verbose:
-#         command.append('--verbose')
-#
-#     command.append(python_sdk_version)
-#     command.append(python_sdk_install_path)
-#
-#     _LOG.debug("Executing Command: {}".format(command))
-#
-#     try:
-#         subprocess.run(command,
-#                        stdout=subprocess.PIPE,
-#                        stderr=subprocess.PIPE,
-#                        text=True,
-#                        check=True,
-#                        env=python_sdk_install_opts)
-#     except subprocess.CalledProcessError as ex:
-#         raise RuntimeError("Error inspecting ProjectRuntime (return code = {})".format(ex.returncode)) from ex
-#
-#     return _inspect_python_sdk(os.path.join(python_sdk_install_path, 'bin', 'python'))
-
-
 def run_setup(pycharm_edition: str, pycharm_version: str, python_bin: str):
-    # if not python_sdk_install_path:
-    #     python_sdk_install_path = os.path.join(_DEFAULT_PYTHON_SDK_INSTALL_PATH, python_sdk_name)
-    #
-    # if not python_sdk_install_options:
-    #     python_sdk_install_options = _DEFAULT_PYTHON_SDK_INSTALL_OPTIONS
-    #
-    # python_sdk_bin, python_sdk_version, python_sdk_libs = _install_python_sdk(python_sdk_version,
-    #                                                                           python_sdk_install_path,
-    #                                                                           python_sdk_install_options)
-    #
-    # print(python_sdk_version, python_sdk_bin, python_sdk_libs)
-
     python_sdk = _inspect_python_sdk(python_bin)
     if python_sdk is None:
         pass
 
     _setup_python_sdk(pycharm_version, pycharm_edition, python_sdk)
-
-    # lintforbrains.config.bootstrap(python_bin)
-    # print(f"bootstrap {python_dir}")
-    # template = jinja2.Template(os.path.join(__file__, "templates", "jdk_table_xml.j2"))
-
-    # def configure_scopes(idea_config_path: str):
-    #     pass

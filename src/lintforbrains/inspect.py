@@ -106,7 +106,10 @@ class Inspector:
         try:
             _LOG.debug(f"Writing inspector output to {command_logfile_path}")
             with open(command_logfile_path, "w") as outfile:
-                subprocess.run(command, stdout=outfile, stderr=outfile, check=True)
+                subprocess.run(command,
+                               stdout=outfile,
+                               stderr=subprocess.STDOUT,
+                               check=True)
         except subprocess.CalledProcessError as ex:
             raise InspectionError("Error running inspect (return code = {})".format(ex.returncode)) from ex
 

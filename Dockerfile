@@ -40,7 +40,7 @@ RUN cd /opt && \
     rm pycharm-${pycharm_edition}-${pycharm_version}.tar.gz
 
 # Ensure pycharm user owns PyCharm
-RUN chown -R pycharm:pycharm /opt/pycharm/
+RUN chown -R pycharm:pycharm ${PYCHARM_ROOT}
 
 # Create lintforbrains installation dir
 ENV TEMP_DIR /tmp/install-lintforbrains

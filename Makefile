@@ -5,11 +5,11 @@ test:
 	PYTHONPATH=$(shell pwd)/src coverage run -m nose test/
 	PYTHONPATH=$(shell pwd)/src coverage report
 
-sdist:
+sdist: version
 	python3 setup.py sdist
 	(cd dist/ && shasum lintforbrains-$(VERSION).tar.gz > lintforbrains-$(VERSION).tar.gz.sha)
 
-bdist:
+bdist: version
 	python3 setup.py bdist_wheel --universal
 	(cd dist/ && shasum lintforbrains-$(VERSION)-py2.py3-none-any.whl > lintforbrains-$(VERSION)-py2.py3-none-any.whl.sha)
 
@@ -18,10 +18,14 @@ clean:
 	find . \( -name '*.pyc' -or -name '*.pyo' \) -print -delete
 	find . -name '__pycache__' -print -delete
 
+version:
+	$(eval VERSION:=$(shell ./version.sh | tee ./version.txt))
+	echo "VERSION=$(VERSION)"
+
 docker-build:
 	docker build . -t kippandrew/lintforbrains
 
 docker-test:
 	docker run --rm kippandrew/lintforbains "bash -x -c 'make test'"
 
-.PHONY: dist bdist sdist clean test docker-build docker-test
+.PHONY: dist bdist sdist clean test version docker-build docker-test

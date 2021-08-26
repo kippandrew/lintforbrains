@@ -74,7 +74,9 @@ def inspect(ctx, project_dir: str, config_file: str):
     """
     Run inspection
     """
-    return lintforbrains.inspect.run_inspect(project_dir, config_file)
+    ret = lintforbrains.inspect.run_inspect(project_dir, config_file)
+
+    ctx.exit(ret)
 
 
 @cli.command()
@@ -86,7 +88,9 @@ def report(ctx, project_dir: str, config_file: str, results_dir: str):
     """
     View inspection results
     """
-    return lintforbrains.report.run_report(project_dir, config_file, results_dir)
+    ret = lintforbrains.report.run_report(project_dir, config_file, results_dir)
+
+    ctx.exit(ret)
 
 
 if __name__ == "__main__":

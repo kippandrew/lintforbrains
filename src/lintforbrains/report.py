@@ -5,7 +5,7 @@ import os
 
 from lintforbrains import config
 from lintforbrains import logging
-from lintforbrains.results import *
+from lintforbrains import results
 from lintforbrains.utilities import abort
 
 _LOG = logging.get_logger(__name__)
@@ -22,21 +22,20 @@ def run_report(project_dir: str, config_file: str, results_dir: str = None) -> i
             config_file = os.path.join(project_dir, config.DEFAULT_CONFIG_FILE)
         configuration = config.load_config(config_file)
     except FileNotFoundError:
-        abort(f"Failed to load configuration file: {config_file}")
-        return
+        return abort(f"Failed to load configuration file: {config_file}")
 
     # find inspection results
     if results_dir is None:
-        results_dir = latest_results_dir(project_dir, configuration)
+        results_dir = results.latest_results_dir(project_dir, configuration)
         if results_dir is None:
-            abort("Unable to locate inspection results.")
-            return
+            return abort("Unable to locate inspection results.")
 
     # load inspection results
-    inspection_results = InspectionResults(project_dir, results_dir, configuration)
+    inspection_results = results.InspectionResults(project_dir, results_dir, configuration)
 
     # create inspection report
     inspection_report = InspectionReport(inspection_results,
+                                         suppress_severity=configuration.report.suppress_severity,
                                          suppress_problems=configuration.report.suppress_problems)
 
     # write inspection report
@@ -56,7 +55,7 @@ class InspectionReport:
     """
 
     def __init__(self,
-                 inspection_results: InspectionResults,
+                 inspection_results: results.InspectionResults,
                  suppress_severity: typing.Iterable[str] = None,
                  suppress_files: typing.Iterable[str] = None,
                  suppress_problems: typing.Iterable[str] = None):
@@ -68,21 +67,21 @@ class InspectionReport:
         self.suppress_problems = suppress_problems or []
         self.problems = self._process_problems(inspection_results.problems)
 
-    def _is_suppressed_file(self, p: InspectionProblem):
+    def _is_suppressed_file(self, p: results.InspectionProblem):
         file_path = pathlib.PurePath(p.file)
         for suppressed_pattern in self.suppress_files:
             if file_path.match(suppressed_pattern):
                 return True
         return False
 
-    def _is_suppressed_severity(self, p: InspectionProblem):
+    def _is_suppressed_severity(self, p: results.InspectionProblem):
         problem_sev = p.severity.value
         for suppressed_sev in self.suppress_severity:
             if suppressed_sev == problem_sev:
                 return True
         return False
 
-    def _is_suppressed_problem(self, p: InspectionProblem):
+    def _is_suppressed_problem(self, p: results.InspectionProblem):
         problem_group = p.type.group.name
         problem_type = p.type.name
         for s in self.suppress_problems:
@@ -95,8 +94,8 @@ class InspectionReport:
                 return True
         return False
 
-    def _process_problems(self, problems: typing.Iterable[InspectionProblem]):
-        results = []
+    def _process_problems(self, problems: typing.Iterable[results.InspectionProblem]):
+        result = []
 
         for p in problems:
             if self._is_suppressed_file(p):
@@ -108,44 +107,30 @@ class InspectionReport:
             if self._is_suppressed_problem(p):
                 _LOG.debug(f"{p} suppressed by problem")
                 continue
-            results.append(p)
+            result.append(p)
 
-        return results
+        return result
 
     # noinspection PyMethodMayBeStatic
-    def group_problems_by_file(self, problems: typing.Iterable[InspectionProblem]):
-        def _by_problem_file(p: InspectionProblem):
+    def group_problems_by_file(self, problems: typing.Iterable[results.InspectionProblem]):
+        def _by_problem_file(p: results.InspectionProblem):
             return p.file
 
         return itertools.groupby(sorted(problems, key=_by_problem_file), key=_by_problem_file)
 
     # noinspection PyMethodMayBeStatic
-    def group_problems_by_severity(self, problems: typing.Iterable[InspectionProblem]):
-        def _by_problem_severity(p: InspectionProblem):
+    def group_problems_by_severity(self, problems: typing.Iterable[results.InspectionProblem]):
+        def _by_problem_severity(p: results.InspectionProblem):
             return p.severity.value
 
         return itertools.groupby(sorted(problems, key=_by_problem_severity), key=_by_problem_severity)
 
     # noinspection PyMethodMayBeStatic
-    def group_problems_by_type(self, problems: typing.Iterable[InspectionProblem]):
-        def _by_problem_class(p: InspectionProblem):
+    def group_problems_by_type(self, problems: typing.Iterable[results.InspectionProblem]):
+        def _by_problem_class(p: results.InspectionProblem):
             return p.type
 
         return itertools.groupby(sorted(problems, key=_by_problem_class), key=_by_problem_class)
-
-    # # noinspection PyMethodMayBeStatic
-    # def group_problems_by_inspection_type(self, problems: typing.Iterable[InspectionProblem]):
-    #     def _by_inspection_type(p: InspectionProblem):
-    #         return p.klass.inspection
-    #
-    #     return itertools.groupby(sorted(problems, key=_by_inspection_type), key=_by_inspection_type)
-    #
-    # # noinspection PyMethodMayBeStatic
-    # def group_problems_by_inspection_group(self, problems: typing.Iterable[InspectionProblem]):
-    #     def _by_inspection_group(p: InspectionProblem):
-    #         return p.klass.inspection.group
-    #
-    #     return itertools.groupby(sorted(problems, key=_by_inspection_group), key=_by_inspection_group)
 
 
 class InspectionReportWriter:
@@ -156,7 +141,7 @@ class InspectionReportWriter:
     def _end_write_file(self, report: InspectionReport, file: str):
         pass
 
-    def _write_problem(self, report: InspectionReport, problem: InspectionProblem):
+    def _write_problem(self, report: InspectionReport, problem: results.InspectionProblem):
         pass
 
     def write(self, report: InspectionReport):
@@ -174,7 +159,7 @@ class SimpleReportWriter(InspectionReportWriter):
     def _begin_write_file(self, report: InspectionReport, file: str):
         print(file)
 
-    def _write_problem(self, report: InspectionReport, problem: InspectionProblem):
+    def _write_problem(self, report: InspectionReport, problem: results.InspectionProblem):
         print(f"{problem.line} : [{problem.severity.value}] - {problem.details} ({problem.description})")
 
     def _end_write_file(self, report: InspectionReport, file: str):
