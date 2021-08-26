@@ -88,7 +88,7 @@ class Inspector:
         :return: inspection results
         """
 
-        command = [os.path.join(lintforbrains.config.PYCHARM_ROOT, "bin", "inspect.sh"),
+        command = [os.path.join(os.getenv('PYCHARM_ROOT', lintforbrains.config.PYCHARM_ROOT), "bin", "inspect.sh"),
                    self.project_dir,
                    self.profile_path,
                    self.output_dir]

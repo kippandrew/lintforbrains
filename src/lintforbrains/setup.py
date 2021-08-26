@@ -10,13 +10,7 @@ import lintforbrains.logging
 
 _LOG = lintforbrains.logging.getLogger(__name__)
 
-# _PYTHON_SDK = "Python SDK"
-#
 _PYTHON_SDK_LIBRARY_CMD = 'from __future__ import print_function; import sys; print("\\n".join([p for p in sys.path if p]))'
-#
-# _DEFAULT_PYTHON_SDK_INSTALL_PATH = os.path.expanduser('~/.local/python')
-#
-# _DEFAULT_PYTHON_SDK_INSTALL_OPTIONS = None
 
 templates = jinja2.Environment(loader=jinja2.PackageLoader('lintforbrains'),
                                autoescape=jinja2.select_autoescape(['xml']))
@@ -42,7 +36,12 @@ def _get_idea_config_path(pycharm_version: str, pycharm_edition: str):
 def _setup_python_sdk(pycharm_version: str, pycharm_edition: str, python_sdk: PythonSDKInfo):
     idea_config_path = _get_idea_config_path(pycharm_version, pycharm_edition)
 
-    print(python_sdk)
+    # configure libs helpers
+    python_helpers = "python-ce" if pycharm_edition == 'community' else 'python'
+    python_sdk.sdk_libs.extend([
+        f"$APPLICATION_HOME_DIR$/plugins/{python_helpers}/helpers/python-skeletons",
+        f"$APPLICATION_HOME_DIR$/plugins/{python_helpers}/helpers/typeshed/stdlib"
+    ])
 
     sdk_output_path = os.path.join(idea_config_path, 'options', 'jdk.table.xml')
     if not os.path.exists(os.path.dirname(sdk_output_path)):
@@ -90,6 +89,7 @@ def _inspect_python_sdk(python_home: str) -> PythonSDKInfo:
                                 check=True)
     except subprocess.CalledProcessError as ex:
         raise RuntimeError("Error inspecting ProjectRuntime (return code = {})".format(ex.returncode)) from ex
+
 
     python_libs = result.stdout.rstrip().splitlines()
 
