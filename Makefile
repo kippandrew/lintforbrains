@@ -2,8 +2,7 @@ deps:
 	pip install -r requirements.txt
 
 test:
-	PYTHONPATH=$(shell pwd)/src coverage run -m nose test/
-	PYTHONPATH=$(shell pwd)/src coverage report
+	PYTHONPATH=$(shell pwd)/src green
 
 sdist: version
 	python3 setup.py sdist
