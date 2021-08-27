@@ -1,7 +1,6 @@
 import itertools
 import pathlib
 import typing
-import os
 
 from lintforbrains import config
 from lintforbrains import logging
@@ -11,32 +10,24 @@ from lintforbrains.utilities import abort
 _LOG = logging.get_logger(__name__)
 
 
-def run_report(project_dir: str, config_file: str, results_dir: str = None) -> int:
+def run_report(project_dir: str, project_config: config.Configuration, results_dir: str = None) -> int:
     """
     Run the report command
     """
 
-    # load configuration
-    try:
-        if config_file is None:
-            config_file = os.path.join(project_dir, config.DEFAULT_CONFIG_FILE)
-        configuration = config.load_config(config_file)
-    except FileNotFoundError:
-        return abort(f"Failed to load configuration file: {config_file}")
-
     # find inspection results
     if results_dir is None:
-        results_dir = results.latest_results_dir(project_dir, configuration)
+        results_dir = results.latest_results_dir(project_dir, project_config)
         if results_dir is None:
             return abort("Unable to locate inspection results.")
 
     # load inspection results
-    inspection_results = results.InspectionResults(project_dir, results_dir, configuration)
+    inspection_results = results.InspectionResults(project_dir, results_dir, project_config)
 
     # create inspection report
     inspection_report = InspectionReport(inspection_results,
-                                         suppress_severity=configuration.report.suppress_severity,
-                                         suppress_problems=configuration.report.suppress_problems)
+                                         suppress_severity=project_config.report.suppress_severity,
+                                         suppress_problems=project_config.report.suppress_problems)
 
     # write inspection report
     inspection_report_writer = SimpleReportWriter()

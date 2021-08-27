@@ -18,7 +18,7 @@ def latest_results_dir(project_dir: str, configuration: config.Configuration):
     Return the most recent inspection result for the given project dir.
     """
 
-    results_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.results_dir))
+    results_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.output_dir))
 
     most_recent_results_time = None
     most_recent_results_dir = None

@@ -5,11 +5,9 @@ import schematics
 
 from lintforbrains import logging
 
-PYCHARM_ROOT = os.getenv('PYCHARM_ROOT', '/opt/pycharm')
-
 DEFAULT_CONFIG_FILE = '.lintconfig'
 
-_DEFAULT_INSPECT_RESULTS_DIR = "inspection-results/"
+_DEFAULT_INSPECT_OUTPUT_DIR = "inspection-results/"
 
 _DEFAULT_INSPECT_SOURCE_DIR = None
 
@@ -32,7 +30,7 @@ class Configuration(schematics.models.Model):
 
         source_dir = schematics.types.StringType(default=_DEFAULT_INSPECT_SOURCE_DIR)
 
-        results_dir = schematics.types.StringType(default=_DEFAULT_INSPECT_RESULTS_DIR)
+        output_dir = schematics.types.StringType(default=_DEFAULT_INSPECT_OUTPUT_DIR)
 
         profile = schematics.types.StringType(default=_DEFAULT_INSPECT_PROFILE)
 

@@ -12,7 +12,7 @@ class ConfigTestCase(TestCase):
         self.assertEqual(config.project.install, "fake install command")
 
         self.assertEqual(config.inspect.source_dir, 'fake-source/')
-        self.assertEqual(config.inspect.results_dir, 'fake-results/')
+        self.assertEqual(config.inspect.output_dir, 'fake-results/')
         self.assertEqual(config.inspect.suppress_severity, ['TYPO'])
         self.assertEqual(config.inspect.suppress_problems, ['SuppressMe'])
         self.assertEqual(config.inspect.include_files, ['src/include/me/*'])

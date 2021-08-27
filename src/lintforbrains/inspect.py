@@ -9,32 +9,32 @@ import jinja2
 from lintforbrains import config
 from lintforbrains import logging
 
-from lintforbrains.utilities import abort, jetbrains_config_path
-
 _LOG = logging.get_logger(__name__)
 
-_PYTHON_SDK_LIBRARY_CMD = 'from __future__ import print_function; import sys; print("\\n".join([p for p in sys.path if p]))'
+_DEFAULT_DEBUG_LEVEL = 2
+
+_PYTHON_SDK_LIBRARY_CMD = 'from __future__ import print_function; import sys; ' \
+                          'print("\\n".join([p for p in sys.path if p]))'
 
 _PYTHON_SDK_TEMPLATES = jinja2.Environment(loader=jinja2.PackageLoader('lintforbrains'),
                                            autoescape=jinja2.select_autoescape(['xml']))
 
 
-def run_inspect(project_dir: str, config_file: str, python_bin: str, pycharm_edition: str, pycharm_version: str) -> int:
+def run_inspect(project_dir: str, project_config: config.Configuration, pycharm_version: str, pycharm_edition: str,
+                pycharm_home_dir: str, pycharm_config_dir: str, python_bin: str, debug_level: int) -> int:
     """
     Run the inspect command
     """
 
-    # load configuration
-    try:
-        if config_file is None:
-            config_file = os.path.join(project_dir, config.DEFAULT_CONFIG_FILE)
-        inspection_configuration = config.load_config(config_file)
-    except FileNotFoundError:
-        return abort(f"Failed to load configuration file: {config_file}")
-
     # run inspector
-    inspector = Inspector(project_dir, inspection_configuration)
-    inspector.run(python_bin, pycharm_version, pycharm_edition, debug_level=2)
+    inspector = Inspector(pycharm_version,
+                          pycharm_edition,
+                          pycharm_home_dir,
+                          pycharm_config_dir,
+                          python_bin,
+                          debug_level)
+
+    inspector.run(project_dir, project_config)
 
     return 0
 
@@ -65,49 +65,40 @@ class Inspector:
 
     configuration = config.Configuration
 
-    def __init__(self, project_dir: str, configuration: config.Configuration):
+    def __init__(self, pycharm_version: str, pycharm_edition: str, pycharm_home_dir: str, pycharm_config_dir: str,
+                 python_bin: str, debug_level: int):
         """
         Initialize instance of the Inspection class.
 
-        :param project_dir: project directory
-        :param configuration: project configuration
+        :param pycharm_version: pycharm version
+        :param pycharm_edition: pycharm edition
+        :param pycharm_home_dir: pycharm home directory
+        :param pycharm_config_dir: pycharm config directory
+        :param python_bin: python binary path
+        :param debug_level: inspector debug level
         """
-        self.project_dir = os.path.normpath(project_dir)
-        self.configuration = configuration
+        self.pycharm_version = pycharm_version
+        self.pycharm_edition = pycharm_edition
+        self.pycharm_home_dir = pycharm_home_dir
+        self.pycharm_config_dir = pycharm_config_dir
+        self.python_bin = python_bin
+        self.debug_level = debug_level
 
-        # results_dir is relative to project_dir
-        self.results_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.results_dir))
-
-        # source_dir is relative to project_dir
-        self.source_dir = os.path.normpath(os.path.join(project_dir, configuration.inspect.source_dir))
-
-        self.profile_path = configuration.inspect.profile
-        if self.profile_path is None:
-            self.profile_path = os.path.join(self.project_dir, ".idea/inspectionProfiles/Project_Default.xml")
-
-        self.output_dir = self._prepare_output_dir()
-
-    def _configure_inspector(self, python_bin: str, pycharm_version: str, pycharm_edition: str):
+    def _configure_inspector(self):
 
         # get information about the python SDK
-        python_sdk = self._inspect_python_sdk(python_bin)
+        python_sdk = self._query_python_sdk(self.python_bin)
         if python_sdk is None:
             pass
 
-        self._write_python_sdk(pycharm_version, pycharm_edition, python_sdk)
-
-    def _write_python_sdk(self, pycharm_version: str, pycharm_edition: str, python_sdk: InspectorSDKInfo):
-
-        idea_config_path = jetbrains_config_path(pycharm_version, pycharm_edition)
-
-        # configure libs helpers
-        python_helpers = "python-ce" if pycharm_edition == 'community' else 'python'
+        # configure python SDK libs helpers
+        python_helpers = "python-ce" if self.pycharm_edition == "community" else "python"
         python_sdk.sdk_libs.extend([
             f"$APPLICATION_HOME_DIR$/plugins/{python_helpers}/helpers/python-skeletons",
             f"$APPLICATION_HOME_DIR$/plugins/{python_helpers}/helpers/typeshed/stdlib"
         ])
 
-        sdk_output_path = os.path.join(idea_config_path, 'options', 'jdk.table.xml')
+        sdk_output_path = os.path.join(self.pycharm_config_dir, 'options', 'jdk.table.xml')
         if not os.path.exists(os.path.dirname(sdk_output_path)):
             os.makedirs(os.path.dirname(sdk_output_path), exist_ok=True)
 
@@ -116,13 +107,7 @@ class Inspector:
 
         _LOG.debug("Wrote SDK config: {}".format(sdk_output_path))
 
-    def _inspect_python_sdk(self, python_bin: str) -> InspectorSDKInfo:
-        """
-        TODO: needs summary
-
-        :param python_bin: Python binary path
-        :return: python runtime info
-        """
+    def _query_python_sdk(self, python_bin: str) -> InspectorSDKInfo:
 
         # get sdk version
         command = [python_bin, '-V']
@@ -137,7 +122,7 @@ class Inspector:
                                     universal_newlines=True,
                                     check=True)
         except subprocess.CalledProcessError as ex:
-            raise RuntimeError("Error inspecting ProjectRuntime (return code = {})".format(ex.returncode)) from ex
+            raise InspectorError("Error getting Python SDK version (return code = {})".format(ex.returncode)) from ex
 
         python_version = result.stdout.rstrip()
 
@@ -154,7 +139,7 @@ class Inspector:
                                     universal_newlines=True,
                                     check=True)
         except subprocess.CalledProcessError as ex:
-            raise RuntimeError("Error inspecting ProjectRuntime (return code = {})".format(ex.returncode)) from ex
+            raise InspectorError("Error querying Python SDK libraries (return code = {})".format(ex.returncode)) from ex
 
         python_libs = result.stdout.rstrip().splitlines()
 
@@ -164,53 +149,66 @@ class Inspector:
                                 python_bin,
                                 python_libs)
 
-    def _prepare_output_dir(self):
-        random_val = random.randint(0, 255)
-        output_time = dt.datetime.now().strftime("%Y%m%dT%H%M%S")
-        output_dir = os.path.join(self.results_dir, "inspection-{}-{}".format(output_time, random_val))
-        os.makedirs(output_dir)
-        _LOG.debug("Created inspection output dir: {}".format(output_dir))
-        return output_dir
+    def _prepare_results_dir(self, output_dir):
+        random_val = random.randint(0, 9)
+        results_timestamp = dt.datetime.now().strftime("%Y%m%dT%H%M%S")
+        results_dir = os.path.join(output_dir, "inspection-{}-{}".format(results_timestamp, random_val))
+        os.makedirs(results_dir)
+        return results_dir
 
-    def _execute_inspector(self, debug_level: int):
+    def _execute_inspector(self, project_dir: str, project_config: config.Configuration):
 
-        command = [os.path.join(os.getenv('PYCHARM_ROOT', config.PYCHARM_ROOT), "bin", "inspect.sh"),
-                   self.project_dir,
-                   self.profile_path,
-                   self.output_dir]
+        # configure the inspector
+        self._configure_inspector()
 
-        if self.source_dir:
-            command.extend(["-d", self.source_dir])
+        # results_dir is relative to project_dir
+        inspection_output_dir = os.path.normpath(os.path.join(project_dir, project_config.inspect.output_dir))
 
-        if debug_level:
-            command.extend(["-v{}".format(debug_level)])
+        # source_dir is relative to project_dir
+        inspection_source_dir = os.path.normpath(os.path.join(project_dir, project_config.inspect.source_dir))
+
+        # generate results dir in output_dir
+        inspection_results_dir = self._prepare_results_dir(inspection_output_dir)
+        _LOG.debug(f"Writing inspection results to {inspection_results_dir}")
+
+        # write logfile to results dir
+        inspection_logfile_path = os.path.join(inspection_results_dir, "inspect.log")
+        _LOG.debug(f"Writing inspection logfile to {inspection_logfile_path}")
+
+        inspection_profile_path = project_config.inspect.profile
+        if inspection_profile_path is None:
+            inspection_profile_path = os.path.join(project_dir, ".idea/inspectionProfiles/Project_Default.xml")
+
+        command = [os.path.join(self.pycharm_home_dir, "bin", "inspect.sh"),
+                   project_dir,
+                   inspection_profile_path,
+                   inspection_results_dir]
+
+        if inspection_source_dir:
+            command.extend(["-d", inspection_source_dir])
+
+        if self.debug_level:
+            command.extend(["-v{}".format(self.debug_level)])
 
         _LOG.debug("Executing command: {}".format(command))
 
-        command_logfile_path = os.path.join(self.output_dir, "inspect.log")
-
         try:
-            _LOG.debug(f"Writing inspector output to {command_logfile_path}")
-            with open(command_logfile_path, "w") as outfile:
+            with open(inspection_logfile_path, "w") as outfile:
                 subprocess.run(command,
                                stdout=outfile,
                                stderr=subprocess.STDOUT,
                                check=True)
         except subprocess.CalledProcessError as ex:
-            raise InspectorError("Error running inspect (return code = {})".format(ex.returncode)) from ex
+            raise InspectorError("Error running inspector (return code = {})".format(ex.returncode)) from ex
 
-        _LOG.info(f"Inspection results written to {self.results_dir}")
+        _LOG.info(f"Inspection results written to {inspection_results_dir}")
 
-    def run(self, python_bin, pycharm_version, pycharm_edition, debug_level=1):
+    def run(self, project_dir: str, project_config: config.Configuration):
         """
-        Run the inspection.
+        Run the inspector.
 
-        :param debug_level: inspection debug level
-        :return: inspection results
+        :param project_dir: project directory
+        :param project_config: project configuration
         """
 
-        self._configure_inspector(python_bin,
-                                  pycharm_version,
-                                  pycharm_edition)
-
-        self._execute_inspector(debug_level)
+        self._execute_inspector(project_dir, project_config)
